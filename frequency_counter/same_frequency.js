@@ -14,23 +14,30 @@
 
 
 function sameFrequency(int1, int2) {
-    let   array = [],
-          array2 = [],
+    let   value1 = '',
+          value2 = '',
           object = {},
           object2 = {};
-
-    function checkArrayEqualLength(arr1, arr2) {
-        arr1.length === arr2.length ? true : false;
+          
+    (function output(){
+        convertToString(int1, int2);
+        checkStringEqualLength(value1,value2);
+    })();
+          
+    function convertToString(num1, num2) {
+        value1 = num1.toString();
+        value2 = num2.toString();
+    }
+    function checkStringEqualLength(str1, str2) {
+        str1.length === str2.length ? true : false;
     }
     function splitInteger() {
         array = int1.toString().split('');
         array2 = int2.toString().split('');
-        // console.log(array);
-        // console.log(array2);
     }
     function convertArrayToObject(arr) {
         arr.forEach(function(index) {
-            
+
         });
     }
 
