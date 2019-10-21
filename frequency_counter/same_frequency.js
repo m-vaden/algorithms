@@ -14,37 +14,46 @@
 
 
 function sameFrequency(int1, int2) {
-    let   value1 = '',
-          value2 = '',
-          object = {},
-          object2 = {};
+    let frequency1 = {},
+        frequency2 = {};
           
-    (function output(){
-        convertToString(int1, int2);
+    return output();
+
+    function output(){
+        const value1 = convertToString(int1);
+              value2 = convertToString(int2);
+
         checkStringEqualLength(value1,value2);
-    })();
+        createFrequencyObj(value1, frequency1);
+        createFrequencyObj(value2, frequency2);
+        return compareFrequencyObj(frequency1, frequency2)
+    };
           
-    function convertToString(num1, num2) {
-        value1 = num1.toString();
-        value2 = num2.toString();
+    function convertToString(num) {
+        return num.toString();
     }
     function checkStringEqualLength(str1, str2) {
         str1.length === str2.length ? true : false;
     }
-    function splitInteger() {
-        array = int1.toString().split('');
-        array2 = int2.toString().split('');
+    function createFrequencyObj(str, obj) {
+        for(let char of str) {
+            obj[char] = (obj[char] || 0) + 1;
+        }
     }
-    function convertArrayToObject(arr) {
-        arr.forEach(function(index) {
-
-        });
+    function compareFrequencyObj(obj1, obj2) {
+        for(let key in obj1) {
+            if(!(key in obj2)){
+                return false
+            }
+            if(obj1[key] !== obj2[key]){
+                return false
+            }
+        }
+        return true;
     }
-
-    splitInteger();
 }
 
-sameFrequency(182, 281);
-sameFrequency(34, 14);
-sameFrequency(3589578, 5879385);
-sameFrequency(22, 222);
+console.log(sameFrequency(182, 281));
+console.log(sameFrequency(34, 14));
+console.log(sameFrequency(3589578, 5879385));
+console.log(sameFrequency(22, 222));
