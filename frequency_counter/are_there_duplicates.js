@@ -82,7 +82,7 @@ areThereDuplicates2('a', 'b', 'c'); //false
 
 function areThereDuplicates3() {
     console.log(new Set(arguments).size !== arguments.length);
-    return new Set(arguments).size !== arguments.length
+    return new Set(arguments).size !== arguments.length;
 }
 
 console.log('---One Liner---');
