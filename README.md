@@ -1,4 +1,4 @@
-# Algorithms Purpose
+# Algorithms 
 General learning and practice of algorithms
 
 # General Use
