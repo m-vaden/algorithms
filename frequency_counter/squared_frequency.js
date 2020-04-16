@@ -28,7 +28,7 @@ squaredFrequency = (arr1, arr2) => {
         if (!(key ** 2 in freqCounter2)) {
             return false;
         }
-        if (freqCounter1[key] !== freqCounter2[key ** 2]) {
+        if (freqCounter1[key] != freqCounter2[key ** 2]) {
             return false;
         }
     }
