@@ -15,20 +15,20 @@ squaredFrequency = (arr1, arr2) => {
     let freqCounter1 = {},
         freqCounter2 = {};
 
-    if (arr1.length != arr2.length) {
+    if(arr1.length != arr2.length){
         return false;
     }
-    for (val of arr1) {
+    for(val of arr1){
         freqCounter1[val] = (freqCounter1[val] || false) + 1;
     }
-    for (val of arr2) {
+    for(val of arr2){
         freqCounter2[val] = (freqCounter2[val] || false) + 1;
     }
-    for (let key in freqCounter1) {
-        if (!(key ** 2 in freqCounter2)) {
+    for(let key in freqCounter1){
+        if(!(key ** 2 in freqCounter2)){
             return false;
         }
-        if (freqCounter1[key] != freqCounter2[key ** 2]) {
+        if(freqCounter1[key] != freqCounter2[key ** 2]){
             return false;
         }
     }

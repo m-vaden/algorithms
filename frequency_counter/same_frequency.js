@@ -18,19 +18,20 @@ let sameFrequency = (int1, int2) => {
 
     let frequencyCounter1 = {},
         frequencyCounter2 = {};
-    if (integer1.length != integer2.length) {
+        
+    if(integer1.length != integer2.length) {
         return false;
     }
 
-    for (val of integer1) {
+    for(let val of integer1) {
         frequencyCounter1[val] = (frequencyCounter1[val] || false) + 1;
     }
-    for (val of integer2) {
+    for(let val of integer2) {
         frequencyCounter2[val] = (frequencyCounter2[val] || false) + 1;
     }
 
-    for (key in frequencyCounter1) {
-        if (!(key in frequencyCounter2)) {
+    for(let key in frequencyCounter1) {
+        if(!(key in frequencyCounter2)) {
             return false;
         }
         if(frequencyCounter2[key] != frequencyCounter1[key]) {
