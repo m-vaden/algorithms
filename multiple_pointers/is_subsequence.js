@@ -5,10 +5,35 @@
 
 
 **  Sample Input:
-**  isSubseuqence('hello', 'hello world'); //true
-**  isSubseuqence('sing', 'sting'); //true
-**  isSubseuqence('abc', 'abracadabra'); //true
-**  isSubseuqence('abc', 'acb'); //false (order matters)
+**  isSubsequence('hello', 'hello world'); //true
+**  isSubsequence('sing', 'sting'); //true
+**  isSubsequence('abc', 'abracadabra'); //true
+**  isSubsequence('abc', 'acb'); //false (order matters)
 */
 
 
+let isSubsequence = (string1, string2) => {
+    let str1 = string1.split(''),
+        str2 = string2.split('');
+    let str1Point = 0,
+        str2Point = 0;
+
+    while(str1Point < (str1.length)) {
+        if(str1[str1Point] != str2[str2Point]) {
+            str2Point ++;
+        }
+        if(str1[str1Point] === str2[str2Point]) {
+            str1Point ++
+        }
+        if((str1Point != str1.length) && (str2Point === str2.length)) {return false;}
+    }
+    
+    return true;
+}
+
+console.log(
+    isSubsequence('hello', 'hello world'), //true
+    isSubsequence('sing', 'sting'), //true
+    isSubsequence('abc', 'abracadabra'), //true
+    isSubsequence('abc', 'acb') //false (order matters)
+);
