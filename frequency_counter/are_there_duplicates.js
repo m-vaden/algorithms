@@ -16,3 +16,22 @@
 ** Frequnecy Counter pattern solution
 */
 
+function areThereDuplicates() {
+    let args = {};
+
+    for(val of arguments) {
+        args[val] = (args[val] || false) + 1
+    }
+    for(key in args) {
+        if(args[key] > 1) {
+            return true
+        }
+    }
+    return false;
+}
+console.log(
+  areThereDuplicates(1, 2, 3), // false
+  areThereDuplicates(1, 2, 2), //true
+  areThereDuplicates('a', 'b', 'c', 'a'), //true
+  areThereDuplicates('a', 'b', 'c') //false
+);
