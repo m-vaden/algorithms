@@ -33,6 +33,9 @@ let maxSubarraySum = (arrOfIntegers, sumIntQuant) => {
         windowEnd++
         windowStart++
         counter++
+    }
+    if(Number.isNaN(highestSum)) {
+        return null;
     }    
     return highestSum;
 }
