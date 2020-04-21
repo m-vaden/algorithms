@@ -1,5 +1,5 @@
 /*
-**  Write a function called productOfArray which takes in an array of numbers and returns the product of them all.
+**  Write a recursive function called productOfArray which takes in an array of numbers and returns the product of them all.
 
 **  Sample Input:
 **  productOfArray([1,2,3]) //6
@@ -16,7 +16,7 @@ function productOfArray(arr) {
 console.log(
     productOfArray([1,2,3]), //6
     productOfArray([1,2,3,10]) //60
-)
+);
 
 // 1 * (60)  [1,2,3,10]
 //       ^
