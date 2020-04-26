@@ -9,7 +9,7 @@
 */
 
 const flatten = arr => {
-    if (arr.length === 0) return [];           
+    if (arr.length === 0) { return []; };           
     
     let result = [];
    
@@ -45,3 +45,4 @@ const flatten = arr => {
 //                                 [6]        concat
 //                                     result = []
 //                                         []
+
