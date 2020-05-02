@@ -10,9 +10,7 @@ let capitalizeWords = (arr) => {
     let base = 1,
         output = [arr[0].toUpperCase()];
 
-    if(arr.length === base) {
-        return output;
-    }
+    if (arr.length === base) { return output; }
 
     return output.concat(capitalizeWords(arr.slice(1)));
 };
