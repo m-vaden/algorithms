@@ -6,13 +6,12 @@
 */
 
 let capitalizeFirst = arr => {
-    if(arr.length < 1) {return [];}
+    if(arr.length < 1) { return []; }
+
     let capitalizedString = arr[0].charAt(0).toUpperCase() + arr[0].slice(1),
         result = [];
 
     result.push(capitalizedString);
-
-    
 
     return result.concat(capitalizeFirst(arr.slice(1)));
 }
