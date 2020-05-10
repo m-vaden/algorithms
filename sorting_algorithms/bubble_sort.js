@@ -25,4 +25,4 @@ function bubbleSort(arr) {
 
 console.log(
     bubbleSort([37,45,29,8])
-)
+);
